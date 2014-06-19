@@ -42,6 +42,8 @@ class SeedDump
                 value.to_s(:db)
               when Range
                 range_to_string(value)
+              when RGeo::Cartesian::PointImpl
+                value.to_s
               else
                 value
               end
